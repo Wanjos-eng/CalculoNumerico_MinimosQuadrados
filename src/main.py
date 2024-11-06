@@ -91,7 +91,7 @@ def executarAjustes(valoresX, valoresY):
     plt.legend()
     plt.grid(True)
 
-    # Gráfico do Ajuste Exponencial (se válido)
+    # Gráfico do Ajuste Exponencial (Caso seja aplicado)
     plt.subplot(1, 3, 3)
     plt.scatter(valoresX, valoresY, color='blue', label='Dados Reais')
     if ajusteExponencialValido:
@@ -132,13 +132,12 @@ def menuPrincipal():
     while True:
         print("\nBem-vindo ao Ajuste de Curvas!")
         print("Escolha uma opção:")
-        print("1. Usar dados padrão")
+        print("1. Usar dados da propria questao")
         print("2. Inserir novos dados")
         print("3. Sair")
         opcao = input("Opção: ")
 
         if opcao == '1':
-            # Dados padrão fornecidos
             valoresX = np.array([0, 1.5, 2.6, 4.2, 6, 8.2, 10, 11.4])
             valoresY = np.array([18, 13, 11, 9, 6, 4, 2, 1])
             executarAjustes(valoresX, valoresY)
