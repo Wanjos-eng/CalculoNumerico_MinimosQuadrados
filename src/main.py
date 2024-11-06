@@ -42,7 +42,7 @@ def executarAjustes(valoresX, valoresY):
                           coeficienteCQuadratico)
     erroQuadratico = calcularErroQuadratico(valoresY, valoresYQuadratico)
 
-    # Tentativa de Ajuste Exponencial
+    # Tentando o Ajuste Exponencial
     try:
         coeficienteAExponencial, coeficienteBExponencial = ajusteExponencial(valoresX, valoresY)
         valoresYExponencial = coeficienteAExponencial * np.exp(coeficienteBExponencial * valoresX)
@@ -52,7 +52,6 @@ def executarAjustes(valoresX, valoresY):
         print(f"Ajuste Exponencial não realizado: {e}")
         ajusteExponencialValido = False
 
-    # Exibindo os resultados
     print("\nResultados dos Ajustes:")
     print("Ajuste Linear:")
     print(f"  Coeficientes: coeficienteAngular = {coeficienteAngularLinear:.4f}, coeficienteLinear = {coeficienteLinear:.4f}")
